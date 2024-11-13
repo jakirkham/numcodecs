@@ -3,11 +3,7 @@ import unittest
 import numpy as np
 import pytest
 
-try:
-    from numcodecs.msgpacks import MsgPack
-except ImportError as e:  # pragma: no cover
-    raise unittest.SkipTest("msgpack not available") from e
-
+from numcodecs.msgpacks import MsgPack
 
 from numcodecs.tests.common import (
     check_backwards_compatibility,

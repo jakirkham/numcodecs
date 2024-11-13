@@ -112,10 +112,9 @@ from numcodecs.bitround import BitRound
 
 register_codec(BitRound)
 
-with suppress(ImportError):
-    from numcodecs.msgpacks import MsgPack
+from numcodecs.msgpacks import MsgPack
 
-    register_codec(MsgPack)
+register_codec(MsgPack)
 
 from numcodecs.checksum32 import CRC32, CRC32C, Adler32, JenkinsLookup3
 
